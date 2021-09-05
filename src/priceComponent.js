@@ -19,7 +19,7 @@ function PriceComponent(props) {
                     <li>&#x2714;&nbsp;{features.publicProjects}</li>
                     <li>&#x2714;&nbsp;{features.comunityAccess}</li>
 
-                    {features.type == "FREE" ? <><li class="disable">&#x2716;&nbsp;{features.privateProjects}</li>
+                    {features.type === "FREE" ? <><li class="disable">&#x2716;&nbsp;{features.privateProjects}</li>
                         <li class="disable">&#x2716;&nbsp;{features.phoneSupport}</li>
                         <li class="disable">&#x2716;&nbsp;{features.subdomain}</li>
                         <li class="disable">&#x2716;&nbsp;{features.statusReports}</li></> : <><li>&#x2714;&nbsp;{features.privateProjects}</li>
@@ -27,7 +27,7 @@ function PriceComponent(props) {
                         <li>&#x2714;&nbsp;{features.subdomain}</li>
 
 
-                        {features.type == "PLUS" ? <li class="disable">&#x2716;&nbsp;{features.statusReports}</li> : <li>&#x2714;&nbsp;{features.statusReports}</li>}
+                        {features.type === "PLUS" ? <li class="disable">&#x2716;&nbsp;{features.statusReports}</li> : <li>&#x2714;&nbsp;{features.statusReports}</li>}
                     </>}
 
                 </ul>
