@@ -1,0 +1,41 @@
+.priceHeading{
+    display: inline;
+    font-weight: bold;
+}
+
+.list{
+    list-style-type: symbols(";");
+    text-align: left;
+}
+
+.card{
+    text-align: center;
+    width: 350px;
+    border: none;
+    border-radius: 1rem;
+  
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+li{
+    margin-bottom: 1rem;
+    list-style-type: none;  
+}
+
+.btn{
+    font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.main{
+    background-color: black;
+}
+.disable{
+    color: rgb(149, 149, 149);
+}
+
