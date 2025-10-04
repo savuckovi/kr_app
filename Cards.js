@@ -16,6 +16,8 @@ export default class Cards extends React.Component {
                 arr.push(<i class="fas fa-star"></i>);
             }
             return arr;
+        } else {
+            console.log('invlid start argument supplied');
         }
  
     }
@@ -24,12 +26,10 @@ export default class Cards extends React.Component {
         let btn = [...this.state.btnarry];
         let upd = btn[evt - 1];
        let change = !upd;
-        btn[evt - 1] = change;
-        console.log(btn);
+        btn[evt - 1] = change;        
         this.setState({ btn });
     }
-    givebtn = (ele) => {
-        console.log('givebtn called');
+    givebtn = (ele) => {        
         console.log(this.state.btnarry);
         if ((this.state.btnarry[ele.id ]) == true)
             return <a href="#" class="btn btn-success" onClick={() => { this.changebtn(ele.id) }} id={ele.id}>{ele.btitle}</a>
@@ -50,19 +50,19 @@ render(){
                         
                         return (
                             <div class="card  text-center mb-5 mr-5" key={element.id}>
-                                <img class="card-img-top" src={element.img} alt="Card image cap" />
-                                <div class="card-body">
-                                    <h5 class="card-title">{element.title}</h5>
-                                 
+                                <img class="card-img-top" src={element.img} alt="Card image cap" />                                                                
+                                <div class="card-body">                                                                     
                                     {this.Star(element.star)}
-                                    
+
+                                    <h5 class="card-title">{element.title}</h5>
                                     <p class="card-text">{element.Price}</p>
                                     {
                                         this.state.btnarry[element.id-1] ? <a href="#" disabled={this.state.btnarry[element.id-1]} class="btn btn-success" onClick={() => { this.changebtn(element.id) }} id={element.id}>{element.btitle}</a>
                                     
-                                    : <a href="#" class="btn btn-primary" onClick={() => { this.changebtn(element.id) }} id={element.id}>{element.btitle}</a>
+                                    : <a href="#" class="btn btn-secondary" onClick={() => { this.changebtn(element.id) }} id={element.id}>{element.btitle}</a>
 
                                     }
+                                    <span class="footer">updated: 2025</span>
                                 
                                    
                                 </div>
